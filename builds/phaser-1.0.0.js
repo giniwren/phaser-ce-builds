@@ -7,7 +7,7 @@
 *
 * Phaser - http://phaser.io
 *
-* v2.11.0 "2018-06-26" - Built: Tue Jul 31 2018 18:42:25
+* v2.11.0 "2018-06-26" - Built: Wed Aug 01 2018 08:27:24
 *
 * By Richard Davey http://www.photonstorm.com @photonstorm
 *
@@ -38627,10 +38627,7 @@ Object.defineProperty(Phaser.Game.prototype, 'paused', {
             {
                 this._paused = false;
                 this.input.reset();
-                if (this.sound.muteOnPause)
-                {
-                    this.sound.unsetMute();
-                }
+                this.sound.unsetMute();
                 this.time.gameResumed();
                 this.onResume.dispatch(this);
             }
